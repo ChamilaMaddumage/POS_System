@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D58D7C8-837B-414E-A0E7-4FE378738CE6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Release\POS20180201\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0C02A954E2AAF0E25AD599518F23EAD91968FC77</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Services_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppAdministrator\AdminRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAdministrator\AdminRules.Designer.cs">
+      <DependentUpon>AdminRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppService\AutoService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppService\AutoService.Designer.cs">
+      <DependentUpon>AutoService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppFinance\BankAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFinance\BankAccount.Designer.cs">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppFinance\Banking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFinance\Banking.Designer.cs">
+      <DependentUpon>Banking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStock\ChequeData.cs" />
+    <Compile Include="Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode.Designer.cs">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarcodeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppFinance\Cash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppFinance\Cash.Designer.cs">
+      <DependentUpon>Cash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppService\CreateTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppService\CreateTemplate.Designer.cs">
+      <DependentUpon>CreateTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRYPT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRYPT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppSales\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSales\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AppMainForm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppMainForm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Globlevariable.cs" />
+    <Compile Include="GridForms\GetCustomerCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridForms\GetCustomerCode.Designer.cs">
+      <DependentUpon>GetCustomerCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridForms\GetItemCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridForms\GetItemCodes.Designer.cs">
+      <DependentUpon>GetItemCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridForms\Supplier_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridForms\Supplier_Details.Designer.cs">
+      <DependentUpon>Supplier_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStock\GRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppStock\GRN.Designer.cs">
+      <DependentUpon>GRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStock\GRNHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppStock\GRNHistory.Designer.cs">
+      <DependentUpon>GRNHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSales\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSales\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSales\InvoiceRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSales\InvoiceRep.Designer.cs">
+      <DependentUpon>InvoiceRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppLogin\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppLogin\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\Cheque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\Cheque.Designer.cs">
+      <DependentUpon>Cheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\ChequeGRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\ChequeGRN.Designer.cs">
+      <DependentUpon>ChequeGRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Form1.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\Mobile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\Mobile.Designer.cs">
+      <DependentUpon>Mobile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Permission.cs" />
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Classes\ProjectConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppStock\PurchaseReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppStock\PurchaseReturn.Designer.cs">
+      <DependentUpon>PurchaseReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAdministrator\ReportsSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAdministrator\ReportsSummary.Designer.cs">
+      <DependentUpon>ReportsSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportStock.Designer.cs">
+      <DependentUpon>ReportStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportStockDetails1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportStockDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppService\RPTSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppService\RPTSales.Designer.cs">
+      <DependentUpon>RPTSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSales\SalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSales\SalesReturn.Designer.cs">
+      <DependentUpon>SalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSales\SalesSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppSales\SalesSummary.Designer.cs">
+      <DependentUpon>SalesSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStock\StockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppStock\StockDetails.Designer.cs">
+      <DependentUpon>StockDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStock\Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppStock\Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStock\Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppStock\Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppAdministrator\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAdministrator\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSRN.Designer.cs">
+      <DependentUpon>ViewSRN.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AppAdministrator\AdminRules.resx">
+      <DependentUpon>AdminRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppService\AutoService.resx">
+      <DependentUpon>AutoService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppFinance\BankAccount.resx">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppFinance\Banking.resx">
+      <DependentUpon>Banking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode.resx">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarcodeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BarcodeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppFinance\Cash.resx">
+      <DependentUpon>Cash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppService\CreateTemplate.resx">
+      <DependentUpon>CreateTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRYPT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRYPT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSales\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppMainForm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridForms\GetCustomerCode.resx">
+      <DependentUpon>GetCustomerCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridForms\GetItemCodes.resx">
+      <DependentUpon>GetItemCodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridForms\Supplier_Details.resx">
+      <DependentUpon>Supplier_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppStock\GRN.resx">
+      <DependentUpon>GRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppStock\GRNHistory.resx">
+      <DependentUpon>GRNHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSales\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSales\InvoiceRep.resx">
+      <DependentUpon>InvoiceRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppLogin\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Cheque.resx">
+      <DependentUpon>Cheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\ChequeGRN.resx">
+      <DependentUpon>ChequeGRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Form1.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\Mobile.resx">
+      <DependentUpon>Mobile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="AppStock\PurchaseReturn.resx">
+      <DependentUpon>PurchaseReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAdministrator\ReportsSummary.resx">
+      <DependentUpon>ReportsSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportStock.resx">
+      <DependentUpon>ReportStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportStockDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportStockDetails1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppService\RPTSales.resx">
+      <DependentUpon>RPTSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSales\SalesReturn.resx">
+      <DependentUpon>SalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSales\SalesSummary.resx">
+      <DependentUpon>SalesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppStock\StockDetails.resx">
+      <DependentUpon>StockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppStock\Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppStock\Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppAdministrator\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSRN.resx">
+      <DependentUpon>ViewSRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Services_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownBtnE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownBtnE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpBtnE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\svg-search.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-animated.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car-parts-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sasukelogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TresetLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ts1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ts2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-button-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kahuna_loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO_POS_SYSTEM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO_POS_SYSTEM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoverPhoto-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-as-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear-png-image-9127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Add-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
