@@ -15,7 +15,7 @@ namespace Services
         public void Connection_Today()
         {
             conn = new SqlConnection("Data Source=.;Initial Catalog=POS;Integrated Security=True");
-            // conn = new SqlConnection("Data Source=tcp:treset.database.windows.net,1433;Initial Catalog=Treset_POS;Persist Security Info=False;User ID=Treset;Password=POS@#$2018;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+           
             conn.Open();
         }
     }
